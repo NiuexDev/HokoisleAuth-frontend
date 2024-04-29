@@ -59,7 +59,7 @@
 
 <script lang="ts" setup>
 import { NForm, NFormItem, NInput, NButton, NFlex, type FormRules, NTabs, NTabPane } from 'naive-ui'
-import { onMounted, ref, type Ref } from 'vue'
+import { ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import verifyEMailRegExp from '@/public/EmailRegExp'
@@ -70,7 +70,7 @@ const toResetPasswordPage = () => {
     router.push('/auth/reset-password')
 }
 const toRegisterPage = () => {
-    router.push('/auth/register')
+    router.replace('/auth/register')
 }
 
 type LoginMethod = 'usePassword' | 'useCode'
@@ -160,7 +160,6 @@ const formUseCodeRule: FormRules = {
 
 <style scoped>
 .submit {
-    /* margin-top: 4px; */
     margin-bottom: 17px;
 }
 

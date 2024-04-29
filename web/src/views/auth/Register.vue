@@ -17,10 +17,6 @@
         <n-form-item path="password" :label="$t('auth.register.password')" first>
             <n-input v-model:value="form.password" :placeholder="$t('auth.register.inputPrompt.O-To-O-Digits-And-Contain-Number-Letter', passwordValidator.length)" />
         </n-form-item>
-
-        <n-form-item path="password" label="重复密码" first>
-            <n-input v-model:value="form.password" :placeholder="$t('auth.register.inputPrompt.O-To-O-Digits-And-Contain-Number-Letter', passwordValidator.length)" />
-        </n-form-item>
         
         <n-flex class="submit" :size="0">
             <n-button type="primary" secondary round style="flex: 1">{{ $t('auth.login.submit') }}</n-button>
@@ -43,7 +39,7 @@ const { t } = useI18n()
 
 const router = useRouter()
 const toLoginPage = () => {
-    router.push('/auth/login')
+    router.replace('/auth/login')
 }
 
 const form = ref({
@@ -61,11 +57,8 @@ const rule: FormRules = {
         },
         {
             validator(_rule, value) {
-                if ( verifyEMailRegExp.test(value) ) {
-                    return true
-                } else {
-                    return false
-                }
+                if ( verifyEMailRegExp.test(value) ) return true
+                return false
             },
             message: t('auth.register.validator.Incorrect-Email-Format'),
             trigger: 'input'
@@ -130,7 +123,6 @@ const rule: FormRules = {
 
 <style scoped>
 .submit {
-    /* margin-top: 4px; */
     margin-bottom: 17px;
 }
 </style>
