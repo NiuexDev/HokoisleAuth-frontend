@@ -17,6 +17,7 @@ fastify.get('/', (request, reply) => {
 /**
  * Run the server!
  */
+
 const start = async () => {
     try {
         await fastify.listen({ port: 3000 })

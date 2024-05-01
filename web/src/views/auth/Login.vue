@@ -159,10 +159,6 @@ const formUseCodeRule: FormRules = {
 </script>
 
 <style scoped>
-.submit {
-    margin-bottom: 17px;
-}
-
 .password {
     font-size: 0.7em;
 }

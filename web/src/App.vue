@@ -8,7 +8,9 @@ const themeOverrides: GlobalThemeOverrides = {
         primaryColor: '#65A018FF',
         primaryColorHover: '#87AD36FF',
         primaryColorPressed: '#4A7A0CFF',
-        primaryColorSuppl: '#83AD36FF'
+        primaryColorSuppl: '#83AD36FF',
+
+        inputColor: "transparent"
     }
 }
 </script>

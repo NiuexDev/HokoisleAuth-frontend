@@ -122,7 +122,4 @@ const rule: FormRules = {
 </script>
 
 <style scoped>
-.submit {
-    margin-bottom: 17px;
-}
 </style>
