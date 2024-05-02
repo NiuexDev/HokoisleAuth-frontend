@@ -1,0 +1,24 @@
+{
+  "name": "hokoisle-auth-server",
+  "version": "0.0.0",
+  "description": "",
+  "main": "scr/app.ts",
+  "scripts": {
+    "dev": "ts-node --project tsconfig.json src/app.ts",
+    "build": "ts-node build.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.15.3",
+    "koa-router": "^12.0.1",
+    "log4js": "^6.9.1"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.15.0",
+    "@types/koa-router": "^7.4.8",
+    "esbuild": "^0.20.2",
+    "esbuild-plugin-alias": "^0.2.1",
+    "ts-node": "^10.9.2"
+  }
+}
