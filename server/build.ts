@@ -14,6 +14,8 @@ build({
     ".ts": "ts",
   },
   plugins: [
-    alias({}),
+    alias({
+      "@": "src",
+    }),
   ],
 })

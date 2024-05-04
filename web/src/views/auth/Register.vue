@@ -7,18 +7,17 @@
         </n-form-item>
 
         <n-form-item path="code" :label="$t('auth.register.code')" first>
-            <n-flex :wrap="false" :size="0">
+            <n-flex :wrap="false" :size="12">
                 <n-input v-model:value="form.code" :placeholder="$t('auth.register.inputPrompt.Email-Verification-Code')" :maxlength="codeValidator.length"/>
-                <div style="width: 20px;"></div>
                 <n-button>{{ $t('auth.register.getCode') }}</n-button>
             </n-flex>
         </n-form-item>
 
         <n-form-item path="password" :label="$t('auth.register.password')" first>
-            <n-input v-model:value="form.password" :placeholder="$t('auth.register.inputPrompt.O-To-O-Digits-And-Contain-Number-Letter', passwordValidator.length)" />
+            <n-input class="password" v-model:value="form.password" :placeholder="$t('auth.register.inputPrompt.O-To-O-Digits-And-Contain-Number-Letter', passwordValidator.length)" type="password"  :input-props="{ autocomplete: 'new-password' }"/>
         </n-form-item>
         
-        <n-flex class="submit" :size="0">
+        <n-flex class="submit" :size="12">
             <n-button type="primary" secondary round style="flex: 1">{{ $t('auth.login.submit') }}</n-button>
         </n-flex>
 
@@ -119,7 +118,7 @@ const rule: FormRules = {
         }
     ]
 }
-</script>
+</script>  
 
 <style scoped>
 </style>

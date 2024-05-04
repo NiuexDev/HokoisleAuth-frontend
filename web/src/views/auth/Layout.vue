@@ -25,10 +25,10 @@ import { RouterView } from 'vue-router'
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(https://www.themoviedb.org/t/p/original/igc9fZkqE65teFzbQKFAtAy6G1B.jpg);
+    background: url(@a/img/Girls_Band_Cry_KV2.webp);
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-x;
+    background-size: contain;
     z-index: -1;
 }
 
@@ -55,7 +55,6 @@ import { RouterView } from 'vue-router'
     }
 }
 
-
 .box:hover {
     box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.1);
 }
@@ -66,5 +65,14 @@ import { RouterView } from 'vue-router'
 
 .box :deep(.submit) {
     margin-bottom: 17px;
+}
+
+:deep(.password) {
+    font-size: 0.7em;
+}
+
+:deep(.password input) {
+    padding: 0 2px;
+    letter-spacing: 0.8em;
 }
 </style>

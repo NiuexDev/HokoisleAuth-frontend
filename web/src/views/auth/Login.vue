@@ -12,9 +12,8 @@
                     <n-input class="password" v-model:value="formUsePassword.password" placeholder="" type="password"/>
                 </n-form-item>
         
-                <n-flex class="submit" :size="0">
+                <n-flex class="submit" :size="12">
                     <n-button type="primary" secondary round style="flex: 1">{{ $t( 'auth.login.submit' ) }}</n-button>
-                    <div style="width: 12px;"></div>
                     <n-button secondary round @click="toResetPasswordPage()">{{ $t( 'auth.login.forgotPassword' ) }}</n-button>
                 </n-flex>
                 
@@ -34,9 +33,8 @@
                 </n-form-item>
         
                 <n-form-item path="code" :label="$t('auth.login.code')" first>
-                    <n-flex :wrap="false" :size="0">
+                    <n-flex :wrap="false" :size="12">
                         <n-input v-model:value="formUseCode.code" placeholder="" :maxlength="codeValidator.length"/>
-                        <div style="width: 20px;"></div>
                         <n-button>{{ $t('auth.login.getCode') }}</n-button>
                     </n-flex>
                 </n-form-item>
@@ -46,9 +44,8 @@
                     <n-button type="primary" secondary round style="flex: 1">{{ $t('auth.login.submit') }}</n-button>
                 </n-flex>
                 
-                <n-flex justify="start" :size="0">
+                <n-flex justify="start" :size="12">
                     <n-button text @click="changeLoginMethod('usePassword')">{{ $t('auth.login.usePasswordLogin') }}</n-button>
-                    <div style="width: 12px;"></div>
                     <n-button text @click="toRegisterPage()">{{ $t('auth.login.register') }}</n-button>
                 </n-flex>
             </n-form>
@@ -159,15 +156,6 @@ const formUseCodeRule: FormRules = {
 </script>
 
 <style scoped>
-.password {
-    font-size: 0.7em;
-}
-
-.password :deep(input) {
-    padding: 0 2px;
-    letter-spacing: 0.8em;
-}
-
 :deep(.n-tabs-pane-wrapper) {
     overflow: visible;
 }
